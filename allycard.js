@@ -42,6 +42,7 @@ function validate (event) {
 
 function showError (errorName) {
   hideErrors();
+  document.getElementById('allycard').classList.remove('show');
   document.getElementById(errorName).classList.add('show');
 }
 
