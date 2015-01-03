@@ -1,0 +1,19 @@
+.allycard, .error {
+  display: none;
+}
+
+.fail .fail-error {
+  display: block;
+}
+
+.empty .empty-error {
+  display: block;
+}
+
+.success .allycard {
+  display: block;
+}
+
+.error {
+  color: #ff0000;
+}
