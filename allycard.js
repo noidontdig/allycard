@@ -1,3 +1,11 @@
+//
+// # Get your ally card!
+//
+
+buildChecklist();
+document.querySelector('form').addEventListener('submit', validate);
+
+
 function buildChecklist () {
   var checklistDiv = document.getElementById('checklist');
   var itemDiv = '';
@@ -21,36 +29,33 @@ function allChecked () {
 function validate (event) {
   event.preventDefault();
   if (!document.getElementById('group').value.length) {
-    emptyError();
+    showError('empty');
     return;
   }
 
   if (allChecked()) {
     success();
   } else {
-    fail();
+    showError('fail');
+  }
+}
+
+function showError (errorName) {
+  hideErrors();
+  document.getElementById(errorName).classList.add('show');
+}
+
+function hideErrors () {
+  var errors = document.querySelectorAll('.error');
+  for (var i = 0; i < errors.length; i++) {
+    errors[i].classList.remove('show');
   }
 }
 
 function success () {
+  hideErrors();
   var group = document.getElementById('group').value;
   document.querySelector('.allycard span').innerText = group;
-  document.body.classList.remove('fail');
-  document.body.classList.remove('empty');
-  document.body.classList.add('success');
+  document.getElementById('allycard').classList.add('show');
 }
 
-function fail () {
-  document.body.classList.remove('empty');
-  document.body.classList.remove('success');
-  document.body.classList.add('fail');
-}
-
-function emptyError () {
-  document.body.classList.remove('fail');
-  document.body.classList.remove('success');
-  document.body.classList.add('empty');
-}
-
-buildChecklist();
-document.querySelector('form').addEventListener('submit', validate);

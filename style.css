@@ -2,15 +2,7 @@
   display: none;
 }
 
-.fail .fail-error {
-  display: block;
-}
-
-.empty .empty-error {
-  display: block;
-}
-
-.success .allycard {
+.show {
   display: block;
 }
 
