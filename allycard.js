@@ -82,4 +82,3 @@ function generatePopup (url) {
 
   window.open(url, '', popupAttrs);
 }
-
