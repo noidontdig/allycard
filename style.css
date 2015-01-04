@@ -3,6 +3,14 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 section {
   opacity: 0;
   transition: opacity 1s;
@@ -14,6 +22,16 @@ ul {
   list-style: none;
   padding: 0;
   text-align: left;
+}
+
+footer {
+  bottom: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+footer a {
+  color: #ff0066;
 }
 
 .fadein {
@@ -30,4 +48,10 @@ ul {
 
 .error {
   color: #ff0000;
+}
+
+@media (min-width: 700px) {
+  body {
+    margin-top: 150px;
+  }
 }
