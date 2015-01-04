@@ -1,4 +1,4 @@
-allycard
+allycard.me
 ========
 
-Get your ally card here
+Are you a true ally?
