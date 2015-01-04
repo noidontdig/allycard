@@ -1,3 +1,25 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+}
+
+section {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+ul {
+  margin: 20px auto;
+  max-width: 500px;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.fadein {
+  opacity: 1;
+}
+
 .allycard, .error {
   display: none;
 }

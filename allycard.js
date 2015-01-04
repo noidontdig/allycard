@@ -15,6 +15,13 @@ function buildChecklist () {
             + item + '">' + checklist[item] + '</label></li>';
     checklistDiv.insertAdjacentHTML('beforeend', itemDiv);
   }
+  fadeIn();
+}
+
+function fadeIn () {
+  setTimeout(function () {
+    document.querySelector('section').classList.add('fadein');
+  }, 1);
 }
 
 function allChecked () {

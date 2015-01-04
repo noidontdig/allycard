@@ -3,29 +3,33 @@
   <head>
     <title>allycard.me</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
   </head>
   <body>
     <h1>Are you a true ally?</h1>
 
-    <h3>Fill out this form and find out!</h3>
-    <form>
-      <label for="group">I am an ally to:</label>
-      <input type="text" name="group" id="group">
+    <section>
+      <h3>Fill out this form and find out!</h3>
+      <form>
+        <label for="group">I am an ally to:</label>
+        <input type="text" name="group" id="group">
 
-      <ul id="checklist"></ul>
+        <ul id="checklist"></ul>
 
-      <input type="submit" value="Give me my ally card">
-    </form>
+        <input type="submit" value="Give me my ally card">
+      </form>
 
-    <div class="allycard" id="allycard">
-      <h2 role="alert">Congratulations, you're an ally to <span></span>!</h2>
-      <button id="tweet">Tweet it!</button>
-    </div>
+      <div class="allycard" id="allycard">
+        <h2 role="alert">Congratulations, you're an ally to <span></span>!</h2>
+        <button id="tweet">Tweet it!</button>
+      </div>
 
-    <p class="error" id="fail" role="alert">Sorry, you've still got work to do...</p>
-    <p class="error" id="empty" role="alert">Who are you an ally to?</p>
+      <p class="error" id="fail" role="alert">Sorry, you've still got work to do...</p>
+      <p class="error" id="empty" role="alert">Who are you an ally to?</p>
+    </section>
 
-    <footer>Made with &lt;3 by <a target="_blank" href="http://twitter.com/alexqin">@alexqin</a>
+    <footer>Made with &lt;3 by <a target="_blank" href="http://twitter.com/alexqin">@alexqin</a></footer>
 
     <script src="checklist.js"></script>
     <script src="allycard.js"></script>
