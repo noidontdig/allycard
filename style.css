@@ -1,5 +1,5 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   text-align: center;
 }
 
@@ -53,5 +53,9 @@ footer a {
 @media (min-width: 700px) {
   body {
     margin-top: 150px;
+  }
+
+  h1 {
+    font-size: 60px;
   }
 }

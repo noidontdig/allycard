@@ -24,16 +24,6 @@ function fadeIn () {
   }, 1);
 }
 
-function allChecked () {
-  var list = document.querySelectorAll('li input');
-  for (var i = 0; i < checklist.length; i++) {
-    if (!list[i].checked) {
-      return false;
-    }
-  }
-  return true;
-}
-
 function submit (event) {
   event.preventDefault();
   if (!document.getElementById('group').value.length) {
@@ -47,6 +37,16 @@ function submit (event) {
   } else {
     showError('fail');
   }
+}
+
+function allChecked () {
+  var list = document.querySelectorAll('li input');
+  for (var i = 0; i < checklist.length; i++) {
+    if (!list[i].checked) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function showError (errorName) {
