@@ -83,24 +83,25 @@ input[type="submit"]:hover, button:hover {
 
 footer {
   bottom: 10px;
-  position: absolute;
+  position: fixed;
   right: 15px;
+}
+
+.allycard {
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .fadein {
   opacity: 1;
 }
 
-.allycard, .error {
+.success, .fail {
   display: none;
 }
 
-.show {
+.show-success .success, .show-fail .fail {
   display: block;
-}
-
-.error {
-  color: #ff0000;
 }
 
 .accessible {

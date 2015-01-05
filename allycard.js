@@ -29,8 +29,9 @@ function submit (event) {
   if (allChecked()) {
     success();
   } else {
-    showError('fail');
+    fail();
   }
+  document.getElementById('allycard').classList.add('fadein');
 }
 
 function allChecked () {
@@ -43,22 +44,15 @@ function allChecked () {
   return true;
 }
 
-function showError (errorName) {
-  hideErrors();
-  document.getElementById('allycard').classList.remove('show');
-  document.getElementById(errorName).classList.add('show');
+function fail() {
+  document.getElementById('allycard').classList.remove('show-success');
+  document.getElementById('allycard').classList.add('show-fail');
 }
 
-function hideErrors () {
-  var errors = document.querySelectorAll('.error');
-  for (var i = 0; i < errors.length; i++) {
-    errors[i].classList.remove('show');
-  }
-}
 
 function success () {
-  hideErrors();
-  document.getElementById('allycard').classList.add('show');
+  document.getElementById('allycard').classList.remove('show-fail');
+  document.getElementById('allycard').classList.add('show-success');
 }
 
 function tweet (event) {
