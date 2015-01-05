@@ -30,6 +30,14 @@ li {
   margin: 10px 0;
 }
 
+li:hover input[type="checkbox"] {
+  background-color: #FFB2D1;
+}
+
+li:hover label {
+  text-decoration: underline;
+}
+
 label {
   padding-left: 20px;
 }
@@ -40,11 +48,16 @@ input[type="checkbox"] {
   width: 20px;
   border-bottom: 3px solid #ccc;
   vertical-align: bottom;
-  /*outline: none;*/
+  transition: all .2s;
+  outline: none;
 }
 
-input[type="checkbox"]:checked {
+input[type="checkbox"]:checked, input[type="checkbox"]:checked:hover {
   background-color: #ff0066;
+}
+
+input[type="submit"], button {
+  -webkit-appearance: none;
 }
 
 footer {
