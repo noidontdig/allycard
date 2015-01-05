@@ -1,6 +1,7 @@
 body {
   font-family: 'Merriweather Sans', sans-serif;
-  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 a {
@@ -14,11 +15,12 @@ a:hover {
 section {
   opacity: 0;
   transition: opacity 1s;
+
+  margin-left: 60px;
 }
 
 ul {
-  margin: 20px auto;
-  max-width: 500px;
+  margin: 20px 0;
   list-style: none;
   padding: 0;
   text-align: left;
@@ -30,7 +32,7 @@ footer {
   right: 15px;
 }
 
-footer a {
+footer a, h1 a {
   color: #ff0066;
 }
 
@@ -50,12 +52,30 @@ footer a {
   color: #ff0000;
 }
 
+.accessible {
+  left: -999px;
+  position: absolute;
+}
+
 @media (min-width: 700px) {
   body {
-    margin-top: 150px;
+    margin-top: 10%;
   }
 
   h1 {
     font-size: 60px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 46px;
+  }
+
+  h3 {
+    border-top: 1px solid;
+    font-size: 24px;
+    margin-top: 50px;
+    padding-top: 20px;
   }
 }
