@@ -6,6 +6,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #ff0066;
 }
 
 a:hover {
@@ -15,7 +16,6 @@ a:hover {
 section {
   opacity: 0;
   transition: opacity 1s;
-
   margin-left: 60px;
 }
 
@@ -85,10 +85,6 @@ footer {
   bottom: 10px;
   position: absolute;
   right: 15px;
-}
-
-footer a, h1 a {
-  color: #ff0066;
 }
 
 .fadein {

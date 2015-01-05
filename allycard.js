@@ -65,8 +65,8 @@ function tweet (event) {
   event.preventDefault();
   var url = 'https://twitter.com/share?url='
           + encodeURIComponent('http://allycard.me')
-          + '&via=allycard&text='
-          + encodeURIComponent('Are you a true ally?');
+          + '&text='
+          + encodeURIComponent('Are you a true ally? Get your "Ally Card" here: ');
 
   generatePopup(url);
 }
