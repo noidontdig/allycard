@@ -26,12 +26,6 @@ function fadeIn () {
 
 function submit (event) {
   event.preventDefault();
-  if (!document.getElementById('group').value.length) {
-    showError('empty');
-    document.getElementById('group').focus();
-    return;
-  }
-
   if (allChecked()) {
     success();
   } else {
@@ -64,8 +58,6 @@ function hideErrors () {
 
 function success () {
   hideErrors();
-  var group = document.getElementById('group').value;
-  document.querySelector('.allycard span').innerText = group;
   document.getElementById('allycard').classList.add('show');
 }
 
