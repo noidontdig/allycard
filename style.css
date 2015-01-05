@@ -31,7 +31,7 @@ li {
 }
 
 li:hover input[type="checkbox"] {
-  background-color: #FFB2D1;
+  background-color: #ffb2d1;
 }
 
 li:hover label {
@@ -58,21 +58,26 @@ input[type="checkbox"]:checked, input[type="checkbox"]:checked:hover {
 
 input[type="submit"], button {
   -webkit-appearance: none;
+  background-color: #fff;
+  font-weight: bold;
+  outline: none;
+  padding: 15px 40px;
+  opacity: .7;
+  transition: all .2s;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  color: #3399ff;
+  border: 3px solid #3399ff;
 }
 
 input[type="submit"] {
   color: #ff0066;
-  background-color: #fff;
   border: 3px solid #ff0066;
-  font-weight: bold;
-  padding: 15px 40px;
-  -webkit-font-smoothing: antialiased;
-  opacity: .6;
-  transition: all .2s;
-  outline: none;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, button:hover {
   opacity: 1;
 }
 
