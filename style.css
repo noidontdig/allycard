@@ -60,6 +60,22 @@ input[type="submit"], button {
   -webkit-appearance: none;
 }
 
+input[type="submit"] {
+  color: #ff0066;
+  background-color: #fff;
+  border: 3px solid #ff0066;
+  font-weight: bold;
+  padding: 15px 40px;
+  -webkit-font-smoothing: antialiased;
+  opacity: .6;
+  transition: all .2s;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  opacity: 1;
+}
+
 footer {
   bottom: 10px;
   position: absolute;
@@ -116,8 +132,7 @@ footer a, h1 a {
     font-size: 24px;
   }
 
-  form {
+  form, input[type="submit"], button {
     font-size: 18px;
-    font-weight: bold;
   }
 }
