@@ -1,6 +1,6 @@
 body {
   font-family: 'Merriweather Sans', sans-serif;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
   max-width: 900px;
 }
 
@@ -48,7 +48,7 @@ input[type="checkbox"] {
   width: 20px;
   border-bottom: 3px solid #ccc;
   vertical-align: bottom;
-  transition: all .2s;
+  transition: all .1s;
   outline: none;
   cursor: pointer;
 }
@@ -65,7 +65,7 @@ input[type="submit"], button {
   outline: none;
   padding: 15px 40px;
   opacity: .7;
-  transition: all .2s;
+  transition: all .1s;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -111,6 +111,10 @@ footer {
   position: absolute;
 }
 
+.resource {
+  margin-left: 40px;
+}
+
 @media (min-width: 700px) {
   body {
     margin-top: 10%;
@@ -136,7 +140,7 @@ footer {
     font-size: 24px;
   }
 
-  form, input[type="submit"], button {
+  p, ul, input[type="submit"], button {
     font-size: 18px;
   }
 }

@@ -29,7 +29,7 @@ function buildResources () {
     resourcesDiv.insertAdjacentHTML('beforeend', groupDiv);
     for (item in resources[group]) {
       resource = resources[group][item];
-      itemDiv = '<li><a href="' + resource.url + '">' + resource.title + '</a>';
+      itemDiv = '<li class="resource"><a href="' + resource.url + '">' + resource.title + '</a>';
       itemDiv += resource.description ? ': ' + resource.description : '';
       itemDiv += '</li>';
       qs = '#' + group + ' ul';
