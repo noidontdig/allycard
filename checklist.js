@@ -1,7 +1,7 @@
 //
 // # Ally Checklist
 //
-// Please add checklist items to the array.
+// Please add checklist items to the `checklist` array.
 //
 
 var checklist = [

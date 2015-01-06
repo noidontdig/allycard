@@ -3,6 +3,10 @@
 //
 
 buildChecklist();
+buildResources();
+document.addEventListener('DOMContentLoaded', function(event) {
+  fadeIn();
+});
 document.querySelector('form').addEventListener('submit', submit);
 document.getElementById('tweet').addEventListener('click', tweet);
 
@@ -15,13 +19,29 @@ function buildChecklist () {
             + item + '">' + checklist[item] + '</label></li>';
     checklistDiv.insertAdjacentHTML('beforeend', itemDiv);
   }
-  fadeIn();
+}
+
+function buildResources () {
+  var resourcesDiv = document.getElementById('resources');
+  var itemDiv, groupDiv, resource, qs = '';
+  for (group in resources) {
+    groupDiv = '<li class="group" id="' + group + '">' + group + '<ul></ul></li>';
+    resourcesDiv.insertAdjacentHTML('beforeend', groupDiv);
+    for (item in resources[group]) {
+      resource = resources[group][item];
+      itemDiv = '<li><a href="' + resource.url + '">' + resource.title + '</a>';
+      itemDiv += resource.description ? ': ' + resource.description : '';
+      itemDiv += '</li>';
+      qs = '#' + group + ' ul';
+      document.querySelector(qs).insertAdjacentHTML('beforeend', itemDiv);
+    }
+  }
 }
 
 function fadeIn () {
   setTimeout(function () {
     document.querySelector('section').classList.add('fadein');
-  }, 1);
+  }, 2);
 }
 
 function submit (event) {
