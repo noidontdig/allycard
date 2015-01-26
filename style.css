@@ -84,6 +84,7 @@ input[type="submit"]:hover, button:hover {
 }
 
 footer {
+  margin-top: 50px;
   text-align: right;
 }
 
