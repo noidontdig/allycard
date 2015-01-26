@@ -111,8 +111,33 @@ footer {
   position: absolute;
 }
 
+.category {
+  position: relative;
+  margin: 20px;
+}
+
+.category:before {
+  color: #ccc;
+  content: '>';
+  font-size: 22px;
+  position: absolute;
+  top: -2px;
+  left: -20px;
+}
+
+.category ul {
+  margin: 0;
+}
+
 .resource {
-  margin-left: 40px;
+  margin: 5px 0 5px 40px;
+}
+
+.resource:before {
+  color: #ccc;
+  content: '.';
+  font-size: 20px;
+  padding-right: 5px;
 }
 
 @media (min-width: 700px) {
@@ -130,17 +155,17 @@ footer {
     line-height: 46px;
   }
 
-  .check {
-    border-top: 5px dashed #ccc;
-    margin-top: 50px;
-    padding-top: 20px;
-  }
-
   h3 {
     font-size: 24px;
   }
 
   p, ul, input[type="submit"], button {
     font-size: 18px;
+  }
+
+  .sep {
+    border-top: 5px dashed #ccc;
+    margin-top: 50px;
+    padding-top: 20px;
   }
 }

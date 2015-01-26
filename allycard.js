@@ -23,16 +23,16 @@ function buildChecklist () {
 
 function buildResources () {
   var resourcesDiv = document.getElementById('resources');
-  var itemDiv, groupDiv, resource, qs = '';
-  for (group in resources) {
-    groupDiv = '<li class="group" id="' + group + '">' + group + '<ul></ul></li>';
-    resourcesDiv.insertAdjacentHTML('beforeend', groupDiv);
-    for (item in resources[group]) {
-      resource = resources[group][item];
+  var itemDiv, categoryDiv, resource, qs = '';
+  for (category in resources) {
+    categoryDiv = '<li class="category" id="resources' + category + '">' + resources[category].category + '<ul></ul></li>';
+    resourcesDiv.insertAdjacentHTML('beforeend', categoryDiv);
+    for (item in resources[category].list) {
+      resource = resources[category].list[item];
       itemDiv = '<li class="resource"><a href="' + resource.url + '">' + resource.title + '</a>';
       itemDiv += resource.description ? ': ' + resource.description : '';
       itemDiv += '</li>';
-      qs = '#' + group + ' ul';
+      qs = '#resources' + category + ' ul';
       document.querySelector(qs).insertAdjacentHTML('beforeend', itemDiv);
     }
   }

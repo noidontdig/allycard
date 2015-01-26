@@ -1,15 +1,27 @@
 //
 // # Ally Resources
 //
-// Please add resources to the resources object.
+// Please add resources to the `resources` array.
 //
 
-var resources = {
-  'Tech': [
-    {
-      title: 'Ally as a Verb',
-      url: 'http://tinyletter.com/krotondo',
-      description: 'Mailinglist for ally resources'
-    }
-  ]
-};
+var resources = [
+  {
+    category: 'Tech',
+    list: [
+      {
+        title: 'Ally as a Verb',
+        url: 'http://tinyletter.com/krotondo',
+        description: 'Mailinglist for ally resources'
+      }
+    ]
+  },
+  {
+    category: 'Resources for white allies',
+    list: [
+      {
+        title: 'For White Allies',
+        url: 'http://tinyletter.com/krotondo'
+      }
+    ]
+  }
+];
