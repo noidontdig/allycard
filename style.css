@@ -138,6 +138,12 @@ footer {
   padding-right: 5px;
 }
 
+.sep {
+  border-top: 5px dashed #ccc;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
 @media (min-width: 700px) {
   body {
     margin-top: 10%;
@@ -163,11 +169,5 @@ footer {
 
   section {
     margin-left: 60px;
-  }
-
-  .sep {
-    border-top: 5px dashed #ccc;
-    margin-top: 50px;
-    padding-top: 20px;
   }
 }
