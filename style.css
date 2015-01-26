@@ -17,7 +17,6 @@ a:hover {
 section {
   opacity: 0;
   transition: opacity 1s;
-  margin-left: 60px;
 }
 
 ul {
@@ -160,6 +159,10 @@ footer {
 
   p, ul, input[type="submit"], button {
     font-size: 18px;
+  }
+
+  section {
+    margin-left: 60px;
   }
 
   .sep {
