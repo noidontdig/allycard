@@ -14,9 +14,9 @@ document.getElementById('tweet').addEventListener('click', tweet);
 function buildChecklist () {
   var checklistDiv = document.getElementById('checklist');
   var itemDiv = '';
-  for (item in checklist) {
-    itemDiv = '<li><input type="checkbox" id="' + item + '"><label for="'
-            + item + '">' + checklist[item] + '</label></li>';
+  for (var item in checklist) {
+    itemDiv = '<li><input type="checkbox" id="' + item + '"><label for="' +
+              item + '">' + checklist[item] + '</label></li>';
     checklistDiv.insertAdjacentHTML('beforeend', itemDiv);
   }
 }
@@ -24,10 +24,10 @@ function buildChecklist () {
 function buildResources () {
   var resourcesDiv = document.getElementById('resources');
   var itemDiv, categoryDiv, resource, qs = '';
-  for (category in resources) {
+  for (var category in resources) {
     categoryDiv = '<li class="category" id="resources' + category + '">' + resources[category].category + '<ul></ul></li>';
     resourcesDiv.insertAdjacentHTML('beforeend', categoryDiv);
-    for (item in resources[category].list) {
+    for (var item in resources[category].list) {
       resource = resources[category].list[item];
       itemDiv = '<li class="resource"><a href="' + resource.url + '">' + resource.title + '</a>';
       itemDiv += resource.description ? ': ' + resource.description : '';
@@ -77,10 +77,10 @@ function success () {
 
 function tweet (event) {
   event.preventDefault();
-  var url = 'https://twitter.com/share?url='
-          + encodeURIComponent('http://allycard.me')
-          + '&text='
-          + encodeURIComponent('Are you a true ally? Get your "Ally Card" here: ');
+  var url = 'https://twitter.com/share?url=' +
+            encodeURIComponent('http://allycard.me') +
+            '&text=' +
+            encodeURIComponent('Are you a true ally? Get your "Ally Card" here: ');
 
   generatePopup(url);
 }
