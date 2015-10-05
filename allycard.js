@@ -25,11 +25,13 @@ function buildResources () {
   var resourcesDiv = document.getElementById('resources');
   var itemDiv, categoryDiv, resource, qs = '';
   for (var category in resources) {
-    categoryDiv = '<li class="category" id="resources' + category + '">' + resources[category].category + '<ul></ul></li>';
+    categoryDiv = '<li class="category" id="resources' + category + '">' +
+                  resources[category].category + '<ul></ul></li>';
     resourcesDiv.insertAdjacentHTML('beforeend', categoryDiv);
     for (var item in resources[category].list) {
       resource = resources[category].list[item];
-      itemDiv = '<li class="resource"><a href="' + resource.url + '">' + resource.title + '</a>';
+      itemDiv = '<li class="resource"><a href="' + resource.url + '">' +
+                resource.title + '</a>';
       itemDiv += resource.description ? ': ' + resource.description : '';
       itemDiv += '</li>';
       qs = '#resources' + category + ' ul';
@@ -80,8 +82,8 @@ function tweet (event) {
   var url = 'https://twitter.com/share?url=' +
             encodeURIComponent('http://allycard.me') +
             '&text=' +
-            encodeURIComponent('Are you a true ally? Get your "Ally Card" here: ');
-
+            encodeURIComponent('Are you a true ally? Get your "Ally Card"' +
+            ' here: ');
   generatePopup(url);
 }
 
@@ -90,8 +92,10 @@ function generatePopup (url) {
   var height = 300;
   var left = (screen.width / 2) - (width / 2);
   var top = (screen.height / 2) - (height / 2);
-  var popupAttrs = 'height=' + height + ',width=' + width + ',left=' + left + ',top=' + top;
-  popupAttrs += ',toolbar=0,location=0,menubar=0,scrollbars=0,status=0,resizable=no';
+  var popupAttrs = 'height=' + height + ',width=' + width + ',left=' + left +
+                   ',top=' + top;
+  popupAttrs += ',toolbar=0,location=0,menubar=0,scrollbars=0,status=0,' +
+                'resizable=no';
 
   window.open(url, '', popupAttrs);
 }
